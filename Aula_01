@@ -6,6 +6,8 @@ interface Ethernet0/0
 interface Ethernet1/0
  ip address 192.168.0.1 255.255.255.252
  half-duplex
+ ip route 192.168.2.0 255.255.255.0 192.168.0.2
+
 
 
 R2:
@@ -16,6 +18,8 @@ interface FastEthernet0/0
 interface Ethernet1/0
  ip address 192.168.0.2 255.255.255.252
  duplex half
+ ip route 192.168.1.0 255.255.255.252 192.168.0.1
+
 
 
 PC1:
