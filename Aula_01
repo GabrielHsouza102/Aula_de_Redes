@@ -1,0 +1,39 @@
+R1:
+interface Ethernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ half-duplex
+
+interface Ethernet1/0
+ ip address 192.168.0.1 255.255.255.252
+ half-duplex
+
+
+R2:
+interface FastEthernet0/0
+ ip address 192.168.2.1 255.255.255.0
+ duplex half
+
+interface Ethernet1/0
+ ip address 192.168.0.2 255.255.255.252
+ duplex half
+
+
+PC1:
+NAME        : PC1[1]
+IP/MASK     : 192.168.1.2/24
+GATEWAY     : 192.168.1.1
+DNS         :
+MAC         : 00:50:79:66:68:00
+LPORT       : 10000
+RHOST:PORT  : 127.0.0.1:10001
+MTU:        : 1500
+
+PC2:
+NAME        : PC2[1]
+IP/MASK     : 192.168.2.2/24
+GATEWAY     : 192.168.2.1
+DNS         :
+MAC         : 00:50:79:66:68:01
+LPORT       : 10002
+RHOST:PORT  : 127.0.0.1:10003
+MTU:        : 1500
