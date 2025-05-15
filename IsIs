@@ -1,0 +1,59 @@
+R1:
+interface Ethernet0/0
+ ip address 192.168.2.1 255.255.255.0
+ ip router isis
+ half-duplex
+
+interface Ethernet1/0
+ ip address 192.168.0.2 255.255.255.248
+ ip router isis
+ half-duplex
+
+router isis
+ net 49.0001.0000.0000.0001.00
+ is-type level-2-only
+ metric-style wide
+
+
+R2:
+interface Ethernet0/0
+ ip address 192.168.3.1 255.255.255.0
+ ip router isis
+ half-duplex
+
+interface Ethernet1/0
+ ip address 192.168.0.3 255.255.255.248
+ ip router isis
+ half-duplex
+
+router isis
+ net 49.0001.0000.0000.0002.00
+ is-type level-2-only
+ metric-style wide
+
+
+
+R3:
+interface Ethernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ ip router isis
+ half-duplex
+
+interface Ethernet1/0
+ ip address 192.168.0.1 255.255.255.248
+ ip router isis
+ half-duplex
+
+router isis
+ net 49.0001.0000.0000.0003.00
+ is-type level-2-only
+ metric-style wide
+
+
+
+
+
+
+
+
+
